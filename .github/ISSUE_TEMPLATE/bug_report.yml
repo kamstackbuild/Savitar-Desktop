@@ -1,7 +1,8 @@
 name: Bug Report
-description: Create a report to help us improve
+description: Create a report to help us improve Savitar
 title: "[BUG] "
 labels: ["bug"]
+assignees: []
 body:
   - type: markdown
     attributes:
@@ -11,36 +12,51 @@ body:
     id: version
     attributes:
       label: Savitar Version
-      description: What version of Savitar are you using?
-      placeholder: e.g., v1.0.0
+      description: What version of Savitar Desktop are you using? (e.g. 1.0.0)
+      placeholder: v1.0.0
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: os
     attributes:
-      label: Windows Version
-      description: What version of Windows are you running?
-      placeholder: e.g., Windows 11 22H2
+      label: Operating System
+      description: What operating system are you using?
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows 8/8.1
+        - Windows 7
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
+      label: Description
       description: A clear and concise description of what the bug is.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to reproduce
-      description: How can we reproduce the issue?
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      description: What did you expect to happen?
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
     validations:
       required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Screenshots
+      description: If applicable, add screenshots or logs to help explain your problem.
+    validations:
+      required: false

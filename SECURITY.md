@@ -2,13 +2,15 @@
 
 ## Supported Versions
 
-Since Savitar is a closed-source freeware application distributed via GitHub Releases, only the latest release is actively supported for security updates.
+Only the latest release of Savitar Desktop is currently supported for security updates. 
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| Older   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within Savitar, please refrain from publicly disclosing it. Instead, contact the maintainers directly or open a private vulnerability report via GitHub. We aim to address all security issues promptly.
+If you discover a security vulnerability within Savitar Desktop, please send an e-mail to security@kamstackbuild.com. All security vulnerabilities will be promptly addressed.
+
+Please do **not** report security vulnerabilities through public GitHub issues.

@@ -1,7 +1,16 @@
 # Support
 
-Welcome to the Savitar community! If you need help with the application, here is how you can get support:
+## Need Help?
 
-1. **Check the README:** Ensure your system meets the requirements and you have read the basic usage instructions.
-2. **Search Existing Issues:** Before opening a new issue, please search [the issue tracker](https://github.com/kamstackbuild/Savitar-Desktop/issues) to see if someone else has already reported your problem or requested your feature.
-3. **Open a New Issue:** If you cannot find an answer, open a new issue using one of our provided issue templates.
+If you need help with Savitar Desktop, please check the following resources:
+
+1. **README**: The [README.md](README.md) file contains basic usage instructions.
+2. **Issues**: Check the [GitHub Issues](https://github.com/kamstackbuild/Savitar-Desktop/issues) to see if someone else has already reported your problem or asked your question.
+
+## Found a Bug?
+
+If you've found a bug, please create a new issue using the **Bug Report** template. Provide as much information as possible to help us reproduce the issue.
+
+## Have a Feature Request?
+
+We are always looking for ways to improve Savitar Desktop. If you have an idea for a new feature, please create a new issue using the **Feature Request** template.
