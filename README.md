@@ -1,57 +1,74 @@
-<div align="center">
-  <h1>⚡ Savitar</h1>
-  <p><strong>A lightning-fast, highly optimized media downloader for Windows</strong></p>
+<p align="center">
+  <img src="assets/savitar_promo_hero_16x9.png" alt="Savitar Desktop - The Ultimate Video Downloader" width="100%">
+</p>
 
-  <p>
-    <a href="https://github.com/kamstackbuild/Savitar-Desktop/releases/latest"><img src="https://img.shields.io/github/v/release/kamstackbuild/Savitar-Desktop?style=for-the-badge&color=success" alt="Latest Release"></a>
-    <a href="https://github.com/kamstackbuild/Savitar-Desktop/releases/latest"><img src="https://img.shields.io/github/downloads/kamstackbuild/Savitar-Desktop/total?style=for-the-badge&color=blue" alt="Downloads"></a>
-    <img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows" alt="Platform">
-    <img src="https://img.shields.io/badge/License-Freeware-orange?style=for-the-badge" alt="License">
-  </p>
-  
-  <h3>
-    <a href="https://github.com/kamstackbuild/Savitar-Desktop/releases/latest">Download Latest Version 🚀</a>
-  </h3>
-</div>
+<h1 align="center">Savitar Desktop</h1>
 
-<br />
+<p align="center">
+  <strong>Lightning-Fast, High-Performance Video Downloader for Windows</strong><br>
+  Powered by the legendary <code>aria2c</code> engine for maximum download speeds.
+</p>
 
-## 🌟 Overview
+<p align="center">
+  <a href="https://github.com/kamstackbuild/Savitar-Desktop/releases/latest/download/Savitar-Setup-v1.0.0.exe">
+    <img src="https://img.shields.io/badge/Download-Savitar_v1.0.0-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download Savitar v1.0.0">
+  </a>
+</p>
 
-Savitar is an advanced desktop application designed for Windows that makes downloading media from the internet incredibly fast and reliable. Powered by industry-leading technologies like `aria2c`, it excels at grabbing high-quality video and audio from popular platforms such as YouTube, TikTok, and many more.
-
-> [!NOTE]
-> Savitar is provided as freeware. It is completely free to use, but the source code is closed.
-
-## ✨ Features
-
-- **Blazing Fast Downloads:** Utilizes multi-connection technology to maximize your bandwidth.
-- **Broad Platform Support:** Download from YouTube, TikTok, Vimeo, and hundreds of other sites.
-- **High Quality:** Extract the best available video resolutions (up to 4K/8K) and pristine audio formats.
-- **Modern Interface:** A clean, intuitive Windows native UI that stays out of your way.
-- **Batch Processing:** Queue up multiple downloads and let Savitar handle them automatically.
-- **No Ads, No Tracking:** Pure utility with zero bloatware or interruptions.
-
-## 💻 System Requirements
-
-- **OS:** Windows 10 (64-bit) or Windows 11
-- **Storage:** 200 MB of free space
-- **Network:** An active internet connection
-
-## 🚀 Getting Started
-
-1. Go to the [Releases page](https://github.com/kamstackbuild/Savitar-Desktop/releases/latest).
-2. Download the `.exe` installer or portable `.zip` for the latest version.
-3. Run the application and start downloading!
-
-## 🤝 Community & Support
-
-- Found a bug? Have a feature request? Please check the [Issue Tracker](https://github.com/kamstackbuild/Savitar-Desktop/issues).
-- Be sure to read our [Code of Conduct](./CODE_OF_CONDUCT.md) before participating in the community.
-- For security-related matters, see [SECURITY.md](./SECURITY.md).
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/kamstackbuild/Savitar-Desktop?style=flat-square" alt="Latest Release">
+  <img src="https://img.shields.io/github/license/kamstackbuild/Savitar-Desktop?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/platform-windows-blue?style=flat-square" alt="Platform: Windows">
+</p>
 
 ---
 
-<div align="center">
-  <p>Built with ❤️ for speed enthusiasts.</p>
-</div>
+## 🚀 Features
+
+Savitar is designed to make downloading media as effortless and fast as possible. Whether you're grabbing a single video or backing up entire channels, Savitar handles it with ease.
+
+- **Unmatched Speed:** Utilizes multiple connections per download via `aria2c`.
+- **Broad Compatibility:** Download from YouTube, TikTok, X (Twitter), Facebook, and thousands of other sites.
+- **Playlist & Channel Downloads:** Seamlessly queue and download entire playlists or channels in a few clicks.
+- **Format Flexibility:** Choose your preferred video quality (up to 4K/8K), extract audio (MP3/FLAC), and download subtitles.
+- **Modern Interface:** A clean, intuitive GUI built for efficiency and ease of use.
+
+## 📸 Interface Showcase
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="assets/Capture.PNG" alt="Main Interface" width="100%"><br>
+      <b>Clean Main Interface</b>
+    </td>
+    <td align="center">
+      <img src="assets/playlist.PNG" alt="Playlist Downloader" width="100%"><br>
+      <b>Batch & Playlist Downloads</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="assets/3rd.PNG" alt="Advanced Features" width="60%"><br>
+      <b>Advanced Download Customization</b>
+    </td>
+  </tr>
+</table>
+
+## ⚡ Quick Start
+
+1. **Download:** Click the massive blue download button above to get `Savitar-Setup-v1.0.0.exe`.
+2. **Install:** Run the installer on your Windows machine.
+3. **Download Media:** Paste your video or playlist link into Savitar and hit download!
+
+## 🛠 Prerequisites
+
+Savitar is completely self-contained for Windows. No extra installation of Python or Node.js is required!
+
+## 📜 License
+
+This software is provided as Freeware. See the [LICENSE](LICENSE) file for more information.
+
+---
+<p align="center">
+  Built with ❤️ for media hoarders and creators everywhere.
+</p>
