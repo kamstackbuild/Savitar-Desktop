@@ -1,16 +1,23 @@
-# Support
+# Savitar Desktop Support
 
-## Need Help?
+## Before you ask for help
 
-If you need help with Savitar Desktop, please check the following resources:
+Please check these resources first:
 
-1. **README**: The [README.md](README.md) file contains basic usage instructions.
-2. **Issues**: Check the [GitHub Issues](https://github.com/kamstackbuild/Savitar-Desktop/issues) to see if someone else has already reported your problem or asked your question.
+- [README](README.md) for installation, usage, and troubleshooting.
+- [Latest release notes](https://github.com/kamstackbuild/Savitar-Desktop/releases/latest) for version-specific details.
+- [Existing GitHub issues](https://github.com/kamstackbuild/Savitar-Desktop/issues) for known reports.
 
-## Found a Bug?
+## Report a problem
 
-If you've found a bug, please create a new issue using the **Bug Report** template. Provide as much information as possible to help us reproduce the issue.
+Open a [bug report](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=bug_report.yml) and include the Savitar version, Windows version, affected site or service, and steps to reproduce the problem. If a site stops working, check **Settings → Engines → Update All** if that option is available in your version.
 
-## Have a Feature Request?
+Before attaching logs or screenshots, remove private URLs, account details, cookies, tokens, and other personal information. Do not post passwords, access tokens, or private media links in public issues.
 
-We are always looking for ways to improve Savitar Desktop. If you have an idea for a new feature, please create a new issue using the **Feature Request** template.
+## Request a feature
+
+Use the [feature request form](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=feature_request.yml). Describe the user problem and the outcome you would like to see.
+
+## Security vulnerability
+
+Do not report security vulnerabilities in public issues. Follow the private reporting instructions in [SECURITY.md](SECURITY.md).

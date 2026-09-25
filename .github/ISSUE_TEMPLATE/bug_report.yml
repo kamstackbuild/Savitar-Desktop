@@ -24,10 +24,17 @@ body:
       options:
         - Windows 11
         - Windows 10
-        - Windows 8/8.1
-        - Windows 7
+        - Other / not sure
     validations:
       required: true
+  - type: input
+    id: site
+    attributes:
+      label: Website or service
+      description: Name the site or service. Do not include a private or account-specific URL.
+      placeholder: YouTube, TikTok, or another site
+    validations:
+      required: false
   - type: textarea
     id: description
     attributes:
@@ -57,6 +64,6 @@ body:
     id: logs
     attributes:
       label: Relevant Logs or Screenshots
-      description: If applicable, add screenshots or logs to help explain your problem.
+      description: Optional. Remove private URLs, usernames, cookies, tokens, and other personal information before attaching files.
     validations:
       required: false

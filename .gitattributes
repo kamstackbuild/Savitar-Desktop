@@ -1,0 +1,13 @@
+* text=auto
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.png binary
+*.PNG binary
+*.jpg binary
+*.jpeg binary
+*.exe binary
+*.ico binary
+.editorconfig text eol=lf
+.gitattributes text eol=lf
