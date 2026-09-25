@@ -10,7 +10,9 @@
 ![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
 [![License](https://img.shields.io/badge/license-proprietary%20freeware-0F9D83)](LICENSE)
 
-<a href="assets/Capture.PNG"><img src="assets/Capture.PNG" alt="Savitar home screen with a media link, available format choices, and a download action" width="960"></a>
+<img src="assets/savitar_promo_hero_16x9.png" alt="Savitar Desktop promotional overview graphic showing the app interface and feature callouts" width="960">
+
+<sub>Promotional artwork is shown as supplied. Claims embedded in the graphic are publisher-provided and cannot be independently verified from this source-only repository.</sub>
 
 </div>
 
@@ -50,17 +52,13 @@ The exact formats, resolutions, and collection options depend on the source and 
 
 ## Screenshots
 
-<details>
-<summary>Playlist and channel downloads</summary>
-<br>
-<a href="assets/playlist.PNG"><img src="assets/playlist.PNG" alt="Savitar playlist screen with batch selection, quality options, and download controls" width="960"></a>
-</details>
-
-<details>
-<summary>Download queue</summary>
-<br>
-<a href="assets/3rd.PNG"><img src="assets/3rd.PNG" alt="Savitar download queue showing progress, speed, and per-item controls" width="960"></a>
-</details>
+<table>
+  <tr>
+    <td align="center"><img src="assets/Capture.PNG" alt="Savitar home screen with a media link, available format choices, and a download action" width="300"><br><sub>Home</sub></td>
+    <td align="center"><img src="assets/playlist.PNG" alt="Savitar playlist screen with batch selection, quality options, and download controls" width="300"><br><sub>Playlists</sub></td>
+    <td align="center"><img src="assets/3rd.PNG" alt="Savitar download queue showing progress, speed, and per-item controls" width="300"><br><sub>Download queue</sub></td>
+  </tr>
+</table>
 
 ## Troubleshooting
 
