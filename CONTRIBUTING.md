@@ -1,21 +1,42 @@
-# Contributing to Savitar Desktop
+# Contributing to Savitar
 
-Thanks for helping improve Savitar Desktop.
+Thank you for your interest in Savitar! We welcome bug reports, feature requests, and community feedback.
 
-## Product feedback and bug reports
+## How to Contribute
 
-- Search [existing issues](https://github.com/kamstackbuild/Savitar-Desktop/issues) before opening a new one.
-- Use the [bug report form](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=bug_report.yml) for a reproducible problem.
-- Use the [feature request form](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=feature_request.yml) for product ideas.
-- Include the Savitar version, Windows version, affected site or service, and clear reproduction steps when relevant.
-- Remove personal data, private URLs, cookies, access tokens, and account details from logs and screenshots.
+### 🐛 Bug Reports
 
-## Repository changes
+If you encounter a bug or issue:
 
-The public repository currently contains documentation and release assets. It does not contain the application source code or build instructions. Keep pull requests focused on files that are present in this repository, explain the user-facing reason for the change, and check Markdown links and formatting before submitting.
+1. Check [existing issues](https://github.com/kamstackbuild/Savitar-Desktop/issues) to avoid duplicates.
+2. Open a [new issue](https://github.com/kamstackbuild/Savitar-Desktop/issues/new) with:
+   - **Savitar version** (shown in About section)
+   - **Windows version** (e.g., Windows 11 23H2)
+   - **Steps to reproduce** the issue
+   - **Expected behavior** vs. what actually happened
+   - **Screenshots or error logs** if applicable
 
-Submitting a contribution does not grant permission to redistribute the application or its installer. The terms in the [EULA](LICENSE) continue to apply.
+### 💡 Feature Requests
 
-## Security issues
+We love hearing what would make Savitar better. Open an issue with the **Feature Request** label and describe:
+- What you want Savitar to do
+- Why it would be useful
+- Any examples from other tools
 
-Do not report vulnerabilities in public issues. Follow the private reporting instructions in [SECURITY.md](SECURITY.md).
+### 📋 Guidelines
+
+- Be respectful and constructive in all interactions.
+- One issue per report — don't combine multiple bugs.
+- Search before posting to reduce duplicates.
+
+## Development
+
+Savitar Desktop is built with:
+- **Python 3.11+** (FastAPI backend, pywebview frontend)
+- **EdgeChromium WebView2** (native Windows rendering)
+- **yt-dlp** + **aria2c** + **FFmpeg** (download & processing engines)
+- **QuickJS** (sandboxed JavaScript execution)
+
+---
+
+Thank you for helping make Savitar better! ⚡

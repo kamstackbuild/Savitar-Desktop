@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you find Savitar useful, please cite it."
+title: "Savitar Desktop — High-Performance Multi-Threaded Video Downloader"
+type: software
+authors:
+  - family-names: "KamStackBuilds"
+    given-names: "Kamran"
+repository-code: "https://github.com/kamstackbuild/Savitar-Desktop"
+url: "https://github.com/kamstackbuild/Savitar-Desktop/releases/latest"
+license: MIT
+version: "1.0.0"
+date-released: "2026-09-18"
+keywords:
+  - video-downloader
+  - youtube-downloader
+  - 4k-downloader
+  - yt-dlp
+  - aria2
+  - ffmpeg
+  - windows
+  - desktop-app
+  - tiktok-downloader
+  - instagram-downloader

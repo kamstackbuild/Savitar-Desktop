@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savitar — Your Fastest Video Downloader</title>
+    <meta name="description" content="Download videos and images from YouTube, Instagram, TikTok, Twitter, Facebook and more. Free, fast, no watermarks.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Savitar" />
+    <link rel="manifest" href="/static/site.webmanifest" />
+    <link rel="stylesheet" href="/static/style.css?v=20260916-01">
+</head>
+<body>
+<div class="app-shell">
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-logo">
+                <img src="/static/icon.png" alt="Savitar" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">Savitar</span>
+                <span class="brand-sub">Your Fastest<br>Video Downloader</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="home" id="nav-home">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item" data-page="playlist" id="nav-playlist">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 17 12 22 22 17"/>
+                    <polyline points="2 12 12 17 22 12"/>
+                </svg>
+                <span>Playlist / Channel</span>
+            </a>
+            <a href="#" class="nav-item" data-page="downloads" id="nav-downloads">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Downloads</span>
+                <span class="nav-badge hidden" id="nav-badge">0</span>
+            </a>
+            <a href="#" class="nav-item" data-page="convert" id="nav-convert">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="17 1 21 5 17 9"/>
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                    <polyline points="7 23 3 19 7 15"/>
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+                <span>Convert</span>
+            </a>
+            <a href="#" class="nav-item" data-page="upcoming" id="nav-upcoming">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <span>Upcoming</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings" id="nav-settings">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+                <span>Settings</span>
+            </a>
+            <a href="#" class="nav-item" data-page="about" id="nav-about">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span>About</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-brand-badge" onclick="window._openExternal('https://github.com/kamstackbuild')" title="Visit KamStackBuilds on GitHub">
+                <div class="sbb-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="sbb-info">
+                    <span class="sbb-title">KamStackBuilds</span>
+                    <span class="sbb-sub">Other Tools ↗</span>
+                </div>
+            </div>
+            <div class="theme-switcher">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="theme-icon">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <select id="theme-select" class="theme-select">
+                    <option value="light">Light Theme</option>
+                    <option value="dark">Dark Theme</option>
+                    <option value="system">System Default</option>
+                </select>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ══ MAIN WORKSPACE ══ -->
+    <div class="workspace">
+
+        <!-- ━━ PAGE: HOME ━━ -->
+        <div class="page active" id="page-home">
+            <div class="page-content home-content">
+                <!-- Badge -->
+                <div class="badge-row">
+                    <span class="free-badge">✦ FREE · NO SIGN-UP · UNLIMITED</span>
+                </div>
+
+                <!-- Hero -->
+                <div class="hero">
+                    <h1>Download Social Media<br><span class="gradient-text">Videos &amp; Images</span> Instantly</h1>
+                    <p class="hero-sub">Paste any link from Instagram, Facebook, Twitter/X, YouTube, LinkedIn<br>and save videos, reels, shorts, and images in HD — free, fast, no watermarks.</p>
+                </div>
+
+                <!-- URL Input -->
+                <div class="url-box" id="url-box">
+                    <input type="url" id="url-input" placeholder="Paste video or image URL here..." autocomplete="off" spellcheck="false">
+                    <!-- Paste icon -->
+                    <button class="url-icon-btn" id="btn-paste" title="Paste from clipboard">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        </svg>
+                    </button>
+                    <!-- Clear icon (hidden until text entered) -->
+                    <button class="url-icon-btn url-clear-btn hidden" id="btn-clear-url" title="Clear">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <button class="fetch-btn" id="btn-extract">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download
+                    </button>
+                </div>
+
+                <!-- Platforms -->
+                <div class="platforms-row">
+                    <span class="platforms-label">Supported Platforms:</span>
+                    <div class="platform-icons" id="platform-chips"></div>
+                </div>
+
+                <!-- Loading Skeleton -->
+                <div class="result-area hidden" id="loading-skeleton">
+                    <div class="result-card skeleton-card">
+                        <div class="sk-thumb"></div>
+                        <div class="sk-body">
+                            <div class="sk-line w70"></div>
+                            <div class="sk-line w40"></div>
+                            <div class="sk-line w100 h36 mt12"></div>
+                            <div class="sk-line w100 h36"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error State -->
+                <div class="result-area hidden" id="error-state">
+                    <div class="error-card">
+                        <div class="error-icon">⚠</div>
+                        <div class="error-body">
+                            <h3 id="error-title">Extraction Failed</h3>
+                            <p id="error-message">Could not process this URL.</p>
+                            <button class="secondary-btn hidden" id="btn-error-settings" type="button">Open Settings → Browser Cookies</button>
+                            <button class="secondary-btn hidden" id="btn-savevid" type="button">Try SaveVid.net (no login needed)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Card -->
+                <div class="result-area hidden" id="result-card">
+                    <div class="result-card extraction-card">
+                        <div class="media-thumb-wrap">
+                            <img id="result-thumb" src="" alt="Video thumbnail">
+                            <div class="thumb-fallback" id="thumbnail-fallback">▶</div>
+                            <span class="kind-tag" id="result-kind">VIDEO</span>
+                            <span class="duration-tag" id="result-duration">0:00</span>
+                        </div>
+                        <div class="media-info">
+                            <h2 class="media-title" id="result-title">Title</h2>
+                            <p class="media-meta" id="result-meta"></p>
+
+                            <div class="quality-header-row">
+                                <span class="quality-label">Quality</span>
+                                <div class="format-filter-tabs" id="format-filter-tabs">
+                                    <button type="button" class="fft-btn active" data-fmt-tab="all">All</button>
+                                    <button type="button" class="fft-btn" data-fmt-tab="video">🎥 Video</button>
+                                    <button type="button" class="fft-btn" data-fmt-tab="audio">🎵 Audio</button>
+                                </div>
+                                <button type="button" class="btn-toggle-all-qualities" id="btn-toggle-all-qualities" title="Show or hide advanced raw formats">
+                                    <span id="toggle-qualities-text">Advanced Formats</span>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="toggle-icon">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="quality-pills" id="quality-pills">
+                                <!-- preset pills injected here -->
+                            </div>
+                            <div class="all-qualities-section hidden" id="all-qualities-section">
+                                <div class="quality-subheader">All Raw &amp; Custom Stream Options</div>
+                                <div class="raw-format-pills" id="raw-format-pills">
+                                    <!-- raw format pills injected here -->
+                                </div>
+                            </div>
+
+                            <button class="fetch-btn download-now-btn" id="btn-download-now" type="button">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <span id="download-now-text">Download</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Downloads on Home -->
+                <div class="recent-section" id="recent-section">
+                    <div class="recent-header">
+                        <h3>Recent Downloads</h3>
+                        <button class="view-all-btn" id="btn-view-all">View All</button>
+                    </div>
+                    <div class="recent-grid" id="recent-grid">
+                        <div class="no-recent" id="no-recent">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            <p>No downloads yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: PLAYLIST & CHANNEL ━━ -->
+        <div class="page" id="page-playlist">
+            <div class="page-content playlist-content">
+                <!-- Header / Hero -->
+                <div class="playlist-hero">
+                    <div class="badge-row">
+                        <span class="free-badge">✦ YOUTUBE PLAYLIST &amp; COMPLETE CHANNEL DOWNLOADER</span>
+                    </div>
+                    <h2>Download YouTube <span class="gradient-text">Playlists &amp; Channels</span></h2>
+                    <p class="hero-sub">Paste any YouTube channel, playlist, shorts tab, or music album URL to download all videos with one click.</p>
+                </div>
+
+                <!-- URL Input Box -->
+                <div class="url-box" id="playlist-url-box">
+                    <input type="url" id="playlist-url-input" placeholder="Paste YouTube channel or playlist URL (e.g. youtube.com/@channel or playlist?list=...)" autocomplete="off" spellcheck="false">
+                    <button class="url-icon-btn" id="btn-playlist-paste" title="Paste from clipboard">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        </svg>
+                    </button>
+                    <button class="url-icon-btn url-clear-btn hidden" id="btn-playlist-clear-url" title="Clear">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                    <button class="fetch-btn" id="btn-playlist-extract">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                        Fetch
+                    </button>
+                </div>
+
+                <!-- Quick hint chips & Scan depth control -->
+                <div class="playlist-hint-row">
+                    <div class="playlist-hint-left">
+                        <span class="playlist-hint-label">Quick samples:</span>
+                        <button class="playlist-hint-chip" data-sample="https://www.youtube.com/@YouTube/videos">@YouTube/videos</button>
+                        <button class="playlist-hint-chip" data-sample="https://www.youtube.com/@YouTube/shorts">@YouTube/shorts</button>
+                        <button class="playlist-hint-chip" data-sample="https://www.youtube.com/playlist?list=PLrAXtmErZgOdP_8GzKt84xjkgMr9Bzho-">Playlist</button>
+                    </div>
+                    <div class="playlist-scan-depth-wrap">
+                        <label for="playlist-scan-limit" class="playlist-scan-label">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Scan Depth:
+                        </label>
+                        <select id="playlist-scan-limit" class="playlist-scan-select" title="Limit number of videos fetched for faster channel analysis">
+                            <option value="50">⚡ Fast (50 videos)</option>
+                            <option value="100" selected>Balanced (100 videos)</option>
+                            <option value="250">Deep (250 videos)</option>
+                            <option value="-1">Full (All videos)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Loading Skeleton -->
+                <div class="playlist-result-area hidden" id="playlist-skeleton">
+                    <div class="result-card skeleton-card">
+                        <div class="sk-thumb" style="width: 140px; height: 100px;"></div>
+                        <div class="sk-body">
+                            <div class="sk-line w70"></div>
+                            <div class="sk-line w40"></div>
+                            <div class="sk-line w100 h36 mt12"></div>
+                        </div>
+                    </div>
+                    <div class="sk-items-wrap">
+                        <div class="sk-item-row"></div>
+                        <div class="sk-item-row"></div>
+                        <div class="sk-item-row"></div>
+                    </div>
+                </div>
+
+                <!-- Error State -->
+                <div class="playlist-result-area hidden" id="playlist-error-state">
+                    <div class="error-card">
+                        <div class="error-icon">⚠</div>
+                        <div class="error-body">
+                            <h3 id="playlist-error-title">Extraction Failed</h3>
+                            <p id="playlist-error-message">Could not process this playlist or channel.</p>
+                            <button class="secondary-btn hidden" id="btn-playlist-error-settings" type="button">Open Settings → Browser Cookies</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playlist Result Container -->
+                <div class="playlist-result-area hidden" id="playlist-result-view">
+                    <!-- Overview Card -->
+                    <div class="playlist-overview-card">
+                        <div class="playlist-banner-wrap">
+                            <img id="pl-thumb" src="" alt="Thumbnail">
+                            <div class="thumb-fallback" id="pl-thumb-fallback">▶</div>
+                            <div class="playlist-type-badge" id="pl-type-badge">PLAYLIST</div>
+                        </div>
+                        <div class="playlist-header-info">
+                            <h2 class="playlist-title" id="pl-title">Title</h2>
+                            <div class="playlist-meta-row" id="pl-meta">
+                                <span class="pl-channel" id="pl-author">Author</span>
+                                <span class="meta-dot">•</span>
+                                <span class="pl-count" id="pl-count">0 videos</span>
+                            </div>
+
+                            <!-- Quality Presets -->
+                            <div class="playlist-quality-section">
+                                <span class="quality-label">Download Quality for All Selected:</span>
+                                <div class="quality-pills" id="playlist-quality-pills">
+                                    <button type="button" class="q-pill active" data-fid="bestvideo*+bestaudio[ext=m4a]/bestvideo*+bestaudio/best" data-label="Best Available">Best Available</button>
+                                    <button type="button" class="q-pill" data-fid="bestvideo[height<=1080]+bestaudio[ext=m4a]/bestvideo[height<=1080]+bestaudio/best[height<=1080]/best" data-label="1080p Full HD">1080p Full HD</button>
+                                    <button type="button" class="q-pill" data-fid="bestvideo[height<=720]+bestaudio[ext=m4a]/bestvideo[height<=720]+bestaudio/best[height<=720]/best" data-label="720p HD">720p HD</button>
+                                    <button type="button" class="q-pill" data-fid="bestvideo[height<=480]+bestaudio[ext=m4a]/bestvideo[height<=480]+bestaudio/best[height<=480]/best" data-label="480p SD">480p SD</button>
+                                    <button type="button" class="q-pill" data-fid="mp3:bestaudio/best" data-label="MP3 Audio">MP3 Audio</button>
+                                </div>
+                            </div>
+
+                            <!-- Download Mode Switcher -->
+                            <div class="playlist-mode-section">
+                                <span class="quality-label">Download Mode:</span>
+                                <div class="dl-mode-switcher" id="dl-mode-switcher">
+                                    <button type="button" class="dl-mode-btn active" id="btn-mode-all" data-mode="all" title="Download multiple videos simultaneously (faster)">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                        </svg>
+                                        <span>All at once (Parallel)</span>
+                                    </button>
+                                    <button type="button" class="dl-mode-btn" id="btn-mode-seq" data-mode="sequential" title="Download one video at a time in sequence (safer for slow networks)">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                                        </svg>
+                                        <span>One by one (1 by 1)</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Options & Main Download Button -->
+                            <div class="playlist-actions-row">
+                                <div class="playlist-options">
+                                    <label class="pl-checkbox-label">
+                                        <input type="checkbox" id="pl-opt-subfolder" checked>
+                                        <span>Save in playlist folder</span>
+                                    </label>
+                                    <label class="pl-checkbox-label">
+                                        <input type="checkbox" id="pl-opt-numbering" checked>
+                                        <span>Number files (01, 02...)</span>
+                                    </label>
+                                </div>
+                                <button class="fetch-btn pl-download-btn" id="btn-download-playlist" type="button">
+                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <span id="pl-download-btn-text">Download Selected (0)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selection & Search Controls Toolbar -->
+                    <div class="playlist-toolbar">
+                        <div class="pl-toolbar-left">
+                            <label class="pl-select-all-label">
+                                <input type="checkbox" id="pl-select-all" checked>
+                                <span id="pl-selected-count-label">Select All</span>
+                            </label>
+                            <div class="pl-quick-buttons">
+                                <button type="button" class="pl-quick-btn" id="btn-pl-select-all">All</button>
+                                <button type="button" class="pl-quick-btn" id="btn-pl-select-none">None</button>
+                                <button type="button" class="pl-quick-btn" id="btn-pl-select-10">First 10</button>
+                                <button type="button" class="pl-quick-btn" id="btn-pl-select-25">First 25</button>
+                            </div>
+                        </div>
+                        <div class="pl-toolbar-right">
+                            <div class="pl-search-wrap">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                </svg>
+                                <input type="text" id="pl-search-input" placeholder="Search videos in playlist...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Videos List -->
+                    <div class="playlist-items-list" id="playlist-items-list">
+                        <!-- Items injected dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: DOWNLOADS ━━ -->
+        <div class="page" id="page-downloads">
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">Downloads</h2>
+                    <p class="page-sub">All your downloaded media files</p>
+                </div>
+                <div class="page-actions">
+                    <button class="action-btn secondary" id="btn-pause-resume-all" title="Pause or resume all downloads">
+                        <span id="icon-pause-resume-all" style="font-size: 13px; margin-right: 4px;">⏸</span>
+                        <span id="text-pause-resume-all">Pause All</span>
+                    </button>
+                    <button class="action-btn danger" id="btn-clear-incomplete" title="Clear all failed, cancelled, and incomplete downloads">Clear Incomplete</button>
+                    <button class="action-btn" id="btn-clear-downloads" title="Clear completed downloads from list">Clear Completed</button>
+                </div>
+            </div>
+
+            <!-- Downloads Filter & Search Toolbar -->
+            <div class="dl-toolbar" id="dl-toolbar">
+                <div class="dl-toolbar-left">
+                    <div class="dl-search-wrap">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" id="dl-search-input" placeholder="Search downloads...">
+                        <button type="button" class="dl-search-clear hidden" id="btn-dl-search-clear" title="Clear search">&times;</button>
+                    </div>
+                    <div class="dl-filter-chips" id="dl-filter-chips">
+                        <button type="button" class="dl-filter-chip active" data-filter="all">All <span class="chip-count" id="dl-count-all">0</span></button>
+                        <button type="button" class="dl-filter-chip" data-filter="active">Active <span class="chip-count" id="dl-count-active">0</span></button>
+                        <button type="button" class="dl-filter-chip" data-filter="completed">Completed <span class="chip-count" id="dl-count-completed">0</span></button>
+                        <button type="button" class="dl-filter-chip" data-filter="failed">Failed <span class="chip-count" id="dl-count-failed">0</span></button>
+                    </div>
+                </div>
+                <div class="dl-toolbar-right">
+                    <div class="dl-sort-wrap">
+                        <span class="dl-bar-label">Sort:</span>
+                        <select id="dl-sort-select" class="dl-select">
+                            <option value="default">Default</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="size">Largest</option>
+                        </select>
+                    </div>
+                    <div class="dl-speed-wrap">
+                        <span class="dl-bar-label">Speed:</span>
+                        <select id="dl-speed-select" class="dl-select" title="Download speed limit">
+                            <option value="0">⚡ Max</option>
+                            <option value="10240">10 MB/s</option>
+                            <option value="5120">5 MB/s</option>
+                            <option value="2048">2 MB/s</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="downloads-grid" id="downloads-container">
+                <div class="empty-downloads" id="empty-downloads">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.25">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <p>No active downloads</p>
+                    <span>Go to Home to download videos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: CONVERT ━━ -->
+        <div class="page" id="page-convert">
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">Convert</h2>
+                    <p class="page-sub">Convert your downloaded files to different formats</p>
+                </div>
+            </div>
+            <div class="convert-content">
+                <div class="convert-card">
+                    <div class="convert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="17 1 21 5 17 9"/>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                            <polyline points="7 23 3 19 7 15"/>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                        </svg>
+                    </div>
+                    <h3>Format Converter</h3>
+                    <p>Convert MP4 to MP3, AVI to MP4, and more.<br>Select a file from your downloads to get started.</p>
+                    <div class="convert-form">
+                        <div class="form-row">
+                            <label>Source File</label>
+                            <div class="file-input-wrap">
+                                <input type="text" id="convert-source" placeholder="Select a downloaded file..." readonly>
+                                <button class="icon-action-btn" id="btn-browse-file" title="Browse">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Output Format</label>
+                            <div class="format-pills" id="convert-formats">
+                                <button class="format-pill active" data-format="mp3">MP3</button>
+                                <button class="format-pill" data-format="mp4">MP4</button>
+                                <button class="format-pill" data-format="m4a">M4A</button>
+                                <button class="format-pill" data-format="webm">WebM</button>
+                                <button class="format-pill" data-format="avi">AVI</button>
+                                <button class="format-pill" data-format="mkv">MKV</button>
+                            </div>
+                        </div>
+                        <button class="fetch-btn convert-start-btn" id="btn-start-convert" disabled>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            Start Convert
+                        </button>
+                    </div>
+                </div>
+                <!-- Converted Files History -->
+                <div class="converted-history" id="converted-history">
+                    <div class="converted-history-header">
+                        <h3>Converted Files</h3>
+                        <button class="action-btn danger" id="btn-clear-converted">Clear All</button>
+                    </div>
+                    <div class="converted-list" id="converted-list">
+                        <div class="empty-converted" id="empty-converted">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.25">
+                                <polyline points="17 1 21 5 17 9"/>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                                <polyline points="7 23 3 19 7 15"/>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                            </svg>
+                            <p>No converted files yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: UPCOMING UPDATES ━━ -->
+        <div class="page" id="page-upcoming">
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">Upcoming Updates</h2>
+                    <p class="page-sub">Exciting new features, platforms, and enhancements in development</p>
+                </div>
+            </div>
+            <div class="upcoming-content">
+                <div class="upcoming-grid">
+                    <!-- SoundCloud Downloader -->
+                    <div class="upcoming-card featured">
+                        <div class="upcoming-card-header">
+                            <div class="upcoming-icon sc-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M1.17 13.92c-.09 0-.17.08-.17.17v1.83c0 .1.08.17.17.17.1 0 .17-.08.17-.17v-1.83c0-.1-.08-.17-.17-.17zm1.17-1.33c-.09 0-.17.07-.17.17v4.5c0 .09.08.17.17.17.1 0 .17-.08.17-.17v-4.5c0-.1-.08-.17-.17-.17zm1.16-.83c-.1 0-.17.07-.17.17v6.17c0 .09.07.17.17.17.09 0 .17-.08.17-.17V11.93c0-.1-.08-.17-.17-.17zm1.17-.5c-.09 0-.17.08-.17.17v7.17c0 .09.08.16.17.16.1 0 .17-.07.17-.16v-7.17c0-.1-.08-.17-.17-.17zm1.17.17c-.1 0-.17.07-.17.17v6.83c0 .1.07.17.17.17.09 0 .17-.08.17-.17v-6.83c0-.1-.08-.17-.17-.17zm1.16-.67c-.09 0-.17.08-.17.17v8.17c0 .09.08.16.17.16.1 0 .17-.07.17-.16v-8.17c0-.1-.08-.17-.17-.17zm1.17-.16c-.09 0-.17.07-.17.16v8.5c0 .1.08.17.17.17.1 0 .17-.08.17-.17v-8.5c0-.1-.08-.16-.17-.16zm1.17-.34c-.1 0-.17.08-.17.17v9.17c0 .09.07.16.17.16.09 0 .17-.07.17-.16v-9.17c0-.1-.08-.17-.17-.17zm1.16.17c-.09 0-.17.08-.17.17v8.83c0 .1.08.17.17.17.1 0 .17-.08.17-.17v-8.83c0-.1-.08-.17-.17-.17zm1.17-.5c-.09 0-.17.07-.17.17v9.5c0 .09.08.17.17.17.1 0 .17-.08.17-.17v-9.5c0-.1-.08-.17-.17-.17zm5.5 1.5c-.32 0-.63.05-.92.14-.3-.88-1.14-1.51-2.13-1.51-.43 0-.82.12-1.17.33v8.71h7.5c1.84 0 3.33-1.49 3.33-3.33s-1.49-3.34-3.33-3.34h-.28c-.28-2.32-2.25-4.13-4.66-4.13-1.8 0-3.37.98-4.22 2.45-.17-.05-.35-.08-.54-.08-.09 0-.18.01-.26.03v.01c-.13.03-.26.08-.38.14v3.52c.4-.64 1.1-1.07 1.9-1.07.39 0 .76.1 1.08.28v6.79h3.33c1.38 0 2.5-1.12 2.5-2.5s-1.12-2.5-2.5-2.5h-.75v-.83c0-1.84-1.49-3.34-3.33-3.34z"/>
+                                </svg>
+                            </div>
+                            <span class="upcoming-status-badge badge-soon">Coming Soon</span>
+                        </div>
+                        <h3>SoundCloud Downloader</h3>
+                        <p>Download full tracks, albums, artist discographies, and playlists directly from SoundCloud in crystal-clear 320kbps MP3 audio.</p>
+                        <div class="upcoming-features-list">
+                            <span>✓ High-bitrate 320kbps MP3 &amp; Lossless Audio</span>
+                            <span>✓ Full Album &amp; Playlist Batch Extraction</span>
+                            <span>✓ ID3 Tagging &amp; Official Artwork Embedding</span>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Playlist Downloader -->
+                    <div class="upcoming-card featured">
+                        <div class="upcoming-card-header">
+                            <div class="upcoming-icon sp-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.435-5.308-1.76-8.792-.963-.335.077-.67-.133-.746-.468-.077-.334.132-.67.467-.746 3.808-.87 7.076-.497 9.72 1.115.295.18.388.563.208.855zm1.226-2.723c-.226.367-.707.483-1.074.257-2.69-1.653-6.79-2.133-9.97-1.168-.413.125-.85-.11-.974-.522-.125-.413.11-.85.522-.975 3.633-1.102 8.147-.568 11.239 1.334.367.226.483.707.257 1.074zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71c-.495.15-.99-.12-1.14-.615-.15-.495.12-.99.615-1.14 3.535-1.073 9.404-.87 12.87 1.19.444.264.59.84.327 1.285-.264.444-.84.59-1.285.326z"/>
+                                </svg>
+                            </div>
+                            <span class="upcoming-status-badge badge-dev">In Development</span>
+                        </div>
+                        <h3>Spotify Playlist Downloader</h3>
+                        <p>Easily download Spotify playlists, top charts, and full podcasts with one-click conversion to high-quality audio files.</p>
+                        <div class="upcoming-features-list">
+                            <span>✓ Direct Spotify Playlist &amp; Album Support</span>
+                            <span>✓ High-Speed Parallel Audio Rendering</span>
+                            <span>✓ Full Track Metadata &amp; Cover Art</span>
+                        </div>
+                    </div>
+
+                    <!-- Batch Downloader -->
+                    <div class="upcoming-card">
+                        <div class="upcoming-card-header">
+                            <div class="upcoming-icon batch-icon">⚡</div>
+                            <span class="upcoming-status-badge badge-planned">Planned</span>
+                        </div>
+                        <h3>Batch Multi-Link Queue</h3>
+                        <p>Paste multiple video links simultaneously from different platforms to download everything in a parallel organized queue.</p>
+                    </div>
+
+                    <!-- Subtitles -->
+                    <div class="upcoming-card">
+                        <div class="upcoming-card-header">
+                            <div class="upcoming-icon sub-icon">💬</div>
+                            <span class="upcoming-status-badge badge-planned">Planned</span>
+                        </div>
+                        <h3>Multilingual Subtitles Extraction</h3>
+                        <p>Auto-extract, translate, and embed subtitles (.srt / .vtt) in multiple languages for YouTube and Facebook videos.</p>
+                    </div>
+                </div>
+
+                <!-- More Tools from KamStackBuilds Banner -->
+                <div class="upcoming-tools-banner" onclick="window._openExternal('https://github.com/kamstackbuild')">
+                    <div class="utb-left">
+                        <div class="utb-badge">⚡ KAMSTACK ECOSYSTEM</div>
+                        <h3>Looking for More Tools &amp; Apps?</h3>
+                        <p>Explore more high-performance desktop utilities, converters, and automation software built by KamStackBuilds.</p>
+                    </div>
+                    <div class="utb-right">
+                        <span class="utb-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span>Visit KamStackBuilds ↗</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: SETTINGS ━━ -->
+        <div class="page" id="page-settings">
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">Settings</h2>
+                    <p class="page-sub">Configure Savitar to match your preferences</p>
+                </div>
+            </div>
+            <div class="settings-content">
+                <!-- Download Settings -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Download</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-folder">Download Path</label>
+                                <p>Where your files will be saved</p>
+                            </div>
+                            <div class="setting-control wide">
+                                <div class="folder-input-wrap">
+                                    <input type="text" id="setting-folder" placeholder="Default downloads folder">
+                                    <button class="icon-action-btn" id="btn-open-folder" title="Open download folder">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg>
+                                    </button>
+                                    <button class="icon-action-btn" id="btn-choose-folder" title="Browse">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                                    </button>
+                                </div>
+                                <p class="folder-hint" id="folder-hint"></p>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-concurrency">Concurrent Downloads</label>
+                                <p>Maximum simultaneous parallel downloads (1 to 10)</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="concurrency-wrap">
+                                    <input type="range" id="setting-concurrency" min="1" max="10" value="5" class="concurrency-slider">
+                                    <span class="concurrency-val" id="concurrency-val">5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>Storage Status</label>
+                                <p id="setting-disk-path">Checking disk space...</p>
+                            </div>
+                            <div class="setting-control">
+                                <span class="disk-badge" id="setting-disk-badge">Checking...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appearance Settings -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Appearance</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>Theme</label>
+                                <p>Choose your preferred color scheme</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="theme-buttons" id="theme-buttons">
+                                    <button class="theme-btn active" data-theme-val="light">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                                        Light
+                                    </button>
+                                    <button class="theme-btn" data-theme-val="dark">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                                        Dark
+                                    </button>
+                                    <button class="theme-btn" data-theme-val="system">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                        System
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Shortcut -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Global Shortcut</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-quick-shortcut">Shortcut: <span class="shortcut-pill">Ctrl + Shift + D</span></label>
+                                <p>Downloads the copied link from any program in the background.</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="switch-toggle" title="Toggle Ctrl + Shift + D quick download">
+                                    <input type="checkbox" id="setting-quick-shortcut" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System & Startup -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">System &amp; Startup</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-autostart">Start with Windows</label>
+                                <p>Automatically start Savitar in the background (system tray) when Windows starts.</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="switch-toggle" title="Start Savitar automatically on Windows startup">
+                                    <input type="checkbox" id="setting-autostart" checked>
+                                    <span class="switch-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="autostart-taskmgr-warning" class="settings-alert-box warning-box hidden">
+                            <div class="alert-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div class="alert-content">
+                                <div class="alert-title">Autostart is disabled in Windows Task Manager</div>
+                                <p class="alert-desc">Windows has disabled Savitar in your system startup settings. To allow Savitar to start with Windows:</p>
+                                <ol class="alert-steps">
+                                    <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> to open Windows Task Manager.</li>
+                                    <li>Switch to the <strong>Startup apps</strong> tab.</li>
+                                    <li>Locate <strong>Savitar</strong>, right-click it, and choose <strong>Enable</strong>.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Quality -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Download Quality</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>Preferred Quality</label>
+                                <p>Default quality for Quick Download (Ctrl+Shift+D) and playlist downloads.</p>
+                            </div>
+                            <div class="setting-control wide">
+                                <select id="setting-preferred-quality" class="setting-select">
+                                    <option value="max" selected>⚡ Max Enhanced (Highest Resolution, 60fps/HDR)</option>
+                                    <option value="best">Best Available (Auto Best Quality)</option>
+                                    <option value="1080p">1080p Full HD</option>
+                                    <option value="720p">720p HD</option>
+                                    <option value="480p">480p SD</option>
+                                    <option value="360p">360p Low</option>
+                                    <option value="audio">Audio Only (MP3)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speed Limit -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Speed Limit</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-speed-limit">Global Speed Limit</label>
+                                <p>Cap download bandwidth across all concurrent tasks</p>
+                            </div>
+                            <div class="setting-control wide">
+                                <select id="setting-speed-limit" class="setting-select">
+                                    <option value="0" selected>⚡ Unlimited (Maximum Speed)</option>
+                                    <option value="1024">1 MB/s (8 Mbps)</option>
+                                    <option value="2048">2 MB/s (16 Mbps)</option>
+                                    <option value="5120">5 MB/s (40 Mbps)</option>
+                                    <option value="10240">10 MB/s (80 Mbps)</option>
+                                    <option value="25600">25 MB/s (200 Mbps)</option>
+                                    <option value="51200">50 MB/s (400 Mbps)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy / Cookies Settings -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Privacy &amp; Cookies</h3>
+                    <div class="settings-card">
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-browser">Browser Cookies</label>
+                                <p>Use your browser session for private, age-restricted, or login-required videos (Instagram, YouTube, etc.)</p>
+                            </div>
+                            <div class="setting-control wide">
+                                <select id="setting-browser">
+                                    <option value="">None</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="setting-divider"></div>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label for="setting-cookies-file">Cookies File</label>
+                                <p>Path to an exported Netscape-format cookies.txt file</p>
+                            </div>
+                            <div class="setting-control wide">
+                                <div class="folder-input-wrap">
+                                    <input type="text" id="setting-cookies-file" placeholder="Path to cookies.txt">
+                                    <button class="icon-action-btn" id="btn-choose-cookies-file" title="Browse cookies.txt file" type="button">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    </button>
+                                    <button class="icon-action-btn" id="btn-clear-cookies-file" title="Clear cookies file" type="button">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engine -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Engine</h3>
+                    <div class="settings-card">
+                        <div class="engine-status-simple">
+                            <div class="engine-status-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="engine-status-text">
+                                <strong id="engine-status-title">All engines are up to date</strong>
+                                <p id="engine-status-detail">Engines are automatically kept up to date in the background.</p>
+                            </div>
+                            <button class="engine-btn primary" id="btn-update-engines" type="button">Update all</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="fetch-btn save-btn" id="btn-save-settings">Save Settings</button>
+            </div>
+        </div>
+
+        <!-- ━━ PAGE: ABOUT ━━ -->
+        <div class="page" id="page-about">
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">About</h2>
+                    <p class="page-sub">Savitar Desktop Application</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-hero-card">
+                    <div class="about-logo">
+                        <img src="/static/icon.png" alt="Savitar" class="about-logo-img" onerror="this.src='/static/logo.png'">
+                    </div>
+                    <h2>Savitar</h2>
+                    <p>Your Fastest Video Downloader</p>
+                    <span class="version-tag" id="about-version">v2026.08</span>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-card-icon">🚀</div>
+                        <h4>Fast &amp; Reliable</h4>
+                        <p>Powered by high-speed extraction engines for maximum download performance.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🔒</div>
+                        <h4>100% Private</h4>
+                        <p>All downloads happen locally on your machine. No data is sent to any server.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🌐</div>
+                        <h4>Multi-Platform</h4>
+                        <p>Supports YouTube, Instagram, TikTok, Twitter/X, Facebook, Pinterest and more.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">✨</div>
+                        <h4>No Watermarks</h4>
+                        <p>Download clean, original-quality videos without any added watermarks.</p>
+                    </div>
+                </div>
+
+                <!-- Support & Help Section -->
+                <div class="about-support-card">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </div>
+                        <div class="support-text">
+                            <h3>Need Help or Facing Any Issue?</h3>
+                            <p>If you experience any problem, bug, or have a question, please contact our support team:</p>
+                        </div>
+                    </div>
+                    <div class="support-contacts-grid">
+                        <div class="support-contact-item" onclick="window.open('mailto:muhammadkamranbashir52@gmail.com')">
+                            <div class="contact-item-icon email-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-details">
+                                <span class="contact-label">Email Support</span>
+                                <span class="contact-value">muhammadkamranbashir52@gmail.com</span>
+                            </div>
+                            <span class="contact-action-btn">Send Email</span>
+                        </div>
+
+                        <div class="support-contact-item" onclick="window.open('https://wa.me/923100179158')">
+                            <div class="contact-item-icon phone-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-details">
+                                <span class="contact-label">WhatsApp Support</span>
+                                <span class="contact-value">+92 310 0179158</span>
+                            </div>
+                            <span class="contact-action-btn">WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KamStackBuilds Developer & Tools Card -->
+                <div class="about-kamstack-card" onclick="window._openExternal('https://github.com/kamstackbuild')" title="Visit KamStackBuilds on GitHub">
+                    <div class="akc-left">
+                        <div class="akc-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </div>
+                        <div class="akc-text">
+                            <span class="akc-badge">OFFICIAL DEVELOPER</span>
+                            <h3>KamStackBuilds</h3>
+                            <p>Creators of Savitar. Check out our GitHub for more open-source tools, updates &amp; software.</p>
+                        </div>
+                    </div>
+                    <div class="akc-right">
+                        <span class="akc-btn">github.com/kamstackbuild ↗</span>
+                    </div>
+                </div>
+
+                <div class="about-links">
+                    <div class="about-link-row">
+                        <span>Application</span>
+                        <div class="about-app-update-wrap">
+                            <span class="about-version-text" id="about-app-version">v1.0.0</span>
+                            <button class="about-check-update-btn" id="btn-check-app-update" type="button" title="Check GitHub for newer releases">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                                <span>Check for Updates</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="about-link-row clickable" onclick="window._openExternal('https://github.com/kamstackbuild')" style="cursor:pointer">
+                        <span>More Tools &amp; Ecosystem</span>
+                        <span class="about-engine-status" style="color:var(--accent-text)">
+                            KamStackBuilds (github.com/kamstackbuild) ↗
+                        </span>
+                    </div>
+                    <div class="about-link-row">
+                        <span>Engines</span>
+                        <span class="about-engine-status" id="about-engine-status">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            All engines are up to date
+                        </span>
+                    </div>
+                    <div class="about-link-row">
+                        <span>License</span>
+                        <span>For personal use only</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end workspace -->
+
+    <!-- ══ STATUS BAR ══ -->
+    <div class="status-bar" id="status-bar">
+        <div class="status-left">
+            <span class="status-item">Downloads: <strong id="stat-count">0</strong></span>
+            <span class="status-sep">|</span>
+            <span class="status-item">Speed: <strong id="stat-speed">0 KB/s</strong></span>
+            <span class="status-sep">|</span>
+            <span class="status-item">Active: <strong id="stat-active">0</strong></span>
+        </div>
+        <div class="status-right" id="status-right">
+            <span class="status-item hidden" id="stat-progress-wrap">
+                <span id="stat-progress-label">Downloading...</span>
+                <div class="status-bar-track">
+                    <div class="status-bar-fill" id="stat-bar-fill" style="width:0%"></div>
+                </div>
+                <span id="stat-size">0 MB / 0 MB</span>
+            </span>
+        </div>
+    </div>
+
+</div><!-- end app-shell -->
+
+<!-- ══ APP UPDATE BOTTOM DOCKED BANNER (OPTION B) ══ -->
+<div class="update-bottom-banner hidden" id="update-modal-overlay" role="region" aria-label="Application Update Available">
+    <div class="update-banner-container">
+        <div class="update-banner-left">
+            <div class="update-banner-icon">
+                <span>🚀</span>
+            </div>
+            <div class="update-banner-text">
+                <div class="update-banner-title-row">
+                    <span class="update-banner-title" id="update-modal-title">New Version Available!</span>
+                    <span class="update-banner-badge" id="update-version-badge">v1.1.0</span>
+                </div>
+                <p class="update-banner-subtitle" id="update-subtitle-text">A new update for Savitar is ready with speed improvements and fixes.</p>
+            </div>
+        </div>
+
+        <div class="update-banner-actions">
+            <button class="update-banner-btn-later" id="btn-update-later" type="button">Remind Later</button>
+            <button class="update-banner-btn-primary" id="btn-update-now" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Update Now</span>
+            </button>
+            <button class="update-banner-close" id="btn-update-close" aria-label="Dismiss update notification" title="Dismiss">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+    <div class="hidden" id="update-changelog-content"></div>
+</div>
+
+<script src="/static/app.js?v=20260916-01"></script>
+</body>
+</html>
