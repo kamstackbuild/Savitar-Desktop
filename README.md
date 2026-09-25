@@ -11,7 +11,13 @@ A lightning-fast, open-source desktop media downloader built for power users, co
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%26%2011-0078D4?logo=windows11&logoColor=white&style=for-the-badge)](https://github.com/kamstackbuild/Savitar-Desktop/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-<br/>
+<br/><br/>
+
+<a href="https://github.com/kamstackbuild/Savitar-Desktop/releases/latest">
+  <img src="static/logo.png" width="96" height="96" alt="Savitar Logo" />
+</a>
+
+<br/><br/>
 
 [**⬇️ Download Savitar v1.0.0 for Windows (64-bit Installer)**](https://github.com/kamstackbuild/Savitar-Desktop/releases/latest/download/Savitar-Setup-v1.0.0.exe)
 
