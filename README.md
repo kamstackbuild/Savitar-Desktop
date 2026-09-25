@@ -9,6 +9,7 @@
 [![Latest release](https://img.shields.io/github/v/release/kamstackbuild/Savitar-Desktop?label=latest%20release)](https://github.com/kamstackbuild/Savitar-Desktop/releases/latest)
 ![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
 [![License](https://img.shields.io/badge/license-proprietary%20freeware-0F9D83)](LICENSE)
+[![Total downloads](https://img.shields.io/github/downloads/kamstackbuild/Savitar-Desktop/total?label=downloads)](https://github.com/kamstackbuild/Savitar-Desktop/releases)
 
 <img src="assets/savitar_promo_hero_16x9.png" alt="Savitar Desktop promotional overview graphic showing the app interface and feature callouts" width="960">
 
@@ -24,13 +25,26 @@ Savitar Desktop is a Windows 10 and Windows 11 video downloader and media downlo
 
 The current public release is **v1.0.0**. The Git repository contains documentation, screenshots, issue forms, and project policies; it does **not** include the application source code or build instructions. Download the Windows installer from the repository’s [official Releases page](https://github.com/kamstackbuild/Savitar-Desktop/releases).
 
+## Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Install](#install)
+- [Verify the v1.0.0 installer](#verify-the-v100-installer)
+- [Troubleshooting](#troubleshooting)
+- [Repository scope and privacy](#repository-scope-and-privacy)
+- [Responsible use](#responsible-use)
+- [Support and policies](#support-and-policies)
+
 ## Features
 
-- **Video and audio options** — choose from the formats and qualities available for the selected source.
-- **Playlist and channel workflows** — review a collection and queue selected items in batches.
-- **Download queue** — monitor progress and manage active and queued items.
-- **Engine updates** — the project documentation directs users to update download engines from **Settings → Engines** when a source stops working.
-- **Broad site coverage** — the v1.0.0 release advertises 1,000+ supported sites and resolutions up to 8K. Actual site support and available formats can vary or change over time.
+| Capability | What Savitar offers | Evidence and limits |
+| --- | --- | --- |
+| Video and audio | Choose from formats and qualities available for a supported link. | The options depend on the source and can change. |
+| Playlists and channels | Review a collection and queue selected items in batches. | See the playlist screenshot below. |
+| Download queue | Track downloads and use per-item controls. | Controls shown can vary by version. |
+| Engine updates | The documentation points to **Settings → Engines → Update All** when a site stops working. | The option may vary by app version. |
+| Site and quality coverage | The v1.0.0 release advertises 1,000+ sites and resolutions up to 8K. | Availability depends on the site, media, and current engine support. |
 
 ## Install
 
@@ -41,9 +55,9 @@ The current public release is **v1.0.0**. The Git repository contains documentat
 
 Only use downloads published on this repository’s [Releases page](https://github.com/kamstackbuild/Savitar-Desktop/releases). Check the release notes for each version’s requirements and changes.
 
-## Usage
+## Quick start
 
-1. Paste a supported media link into Savitar.
+1. Open Savitar and paste a supported media link.
 2. Review the formats and quality options available for that link.
 3. Choose a destination and add the item to the download queue.
 4. For a playlist or channel, review the available items and select what to queue.
@@ -60,13 +74,31 @@ The exact formats, resolutions, and collection options depend on the source and 
   </tr>
 </table>
 
+## Verify the v1.0.0 installer
+
+The published release lists the installer SHA-256 below. After downloading `Savitar-Setup-v1.0.0.exe`, run this in PowerShell and compare the result with the release value:
+
+```powershell
+Get-FileHash .\Savitar-Setup-v1.0.0.exe -Algorithm SHA256
+```
+
+```text
+127cc2baa53d983c760aadc84099955d60b502ad6fcf2158b0d235c6f2faeae6
+```
+
+A matching checksum confirms the downloaded file matches the published digest; it does not independently establish who built or signed the application.
+
 ## Troubleshooting
 
 If a site stops working, first try **Settings → Engines → Update All** if that option is available in your version. Site compatibility can change as services update. If the problem continues, [open a bug report](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=bug_report.yml) with the app version, Windows version, site name, and steps to reproduce it. Remove private URLs and personal information from any logs or screenshots.
 
-## Project and privacy notes
+## Repository scope and privacy
 
 Savitar is distributed as proprietary freeware under the included [EULA](LICENSE). The public repository does not include the application source, so its runtime behavior and network activity cannot be independently reviewed from these files. Avoid relying on this README as a security audit; use the [security policy](SECURITY.md) to report a vulnerability.
+
+## Responsible use
+
+Only download material you own, have permission to save, or are otherwise authorized to use. Follow the terms that apply to the source website and the [Savitar EULA](LICENSE).
 
 ## Contributing
 
@@ -76,9 +108,10 @@ This repository currently publishes the application installer and project docume
 
 The project credits [yt-dlp](https://github.com/yt-dlp/yt-dlp), [FFmpeg](https://ffmpeg.org/), [aria2](https://aria2.github.io/), Python, FastAPI, PyWebView, and WebView2. See the individual upstream projects for their licenses and notices.
 
-## Support
+## Support and policies
 
 - [Support guide](SUPPORT.md)
 - [Report a bug](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=bug_report.yml)
 - [Request a feature](https://github.com/kamstackbuild/Savitar-Desktop/issues/new?template=feature_request.yml)
 - [Security policy](SECURITY.md)
+- [Contribution guide](CONTRIBUTING.md)
